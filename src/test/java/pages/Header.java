@@ -10,6 +10,8 @@ public class Header extends BasePage{
     private By categoryOptionsSelector = By.cssSelector("option");
     private By searchFieldSelector = By.cssSelector("#twotabsearchtextbox");
     private By searchBtnSelector = By.cssSelector("#nav-search-submit-button");
+    private By chooseAddressSelector = By.cssSelector("#nav-global-location-popover-link");
+    private By addressPopupSelector = By.cssSelector(".a-popover-wrapper");
 
     public void selectSearchCategory(String category){
         WebElement categoryBtn = super.findElement(categorySelector);
@@ -32,5 +34,12 @@ public class Header extends BasePage{
 
     public String getSearchCategory() {
         return super.findElement(categorySelector).getText();
+    }
+
+    public ChooseAddressPopup openChooseAddressPopup(){
+        super.findElement(chooseAddressSelector).click();
+        WebElement popup = super.findElement(addressPopupSelector);
+        super.setDriverWaitVisibility(popup);
+        return new ChooseAddressPopup();
     }
 }
