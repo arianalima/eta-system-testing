@@ -33,7 +33,8 @@ public class SearchSteps {
     @Then("The results shown are related to the {string}")
     public void theResultsShownAreRelatedToThe(String term) {
         for (WebElement result: resultsPage.getResults()){
-            Assertions.assertTrue(result.getText().toLowerCase().contains(term), "ARI"+result.getText().toLowerCase());
+            String resultText = result.getText().toLowerCase();
+            Assertions.assertTrue(resultText.contains(term.toLowerCase()), result.getText().toLowerCase());
         }
     }
 

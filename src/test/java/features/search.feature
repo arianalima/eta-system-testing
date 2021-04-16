@@ -1,8 +1,8 @@
+@eta
 Feature: Search products
 
   Background: The user sees the search field
 
-  @wip
   Scenario Outline: Check that searched books shown are related to the term
     Given The "Livros" category is selected
     When  The user search for some "<term>"
@@ -10,5 +10,5 @@ Feature: Search products
     Examples:
       | term    |
       | criança |
-      | people  |
+      | Sheldon |
       | Brasil  |

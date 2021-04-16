@@ -38,6 +38,10 @@ public class BasePage {
         this.driverWait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public void setDriverWaitVisibility(By selector){
+        this.driverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(selector));
+    }
+
     public void clickElement(WebElement element){
         setDriverWaitVisibility(element);
         element.click();

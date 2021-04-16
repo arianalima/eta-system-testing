@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "stepDefinitions",
-        tags = "@wip",
+        tags = "@eta",
         monochrome = false,
         plugin = "pretty",
         snippets = CucumberOptions.SnippetType.CAMELCASE
