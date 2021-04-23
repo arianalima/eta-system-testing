@@ -8,7 +8,7 @@ Feature: Search products
     When  The user search for some "<term>"
     Then  The results shown are related to the "<term>"
     Examples:
-      | term    |
-      | criança |
-      | Sheldon |
-      | Brasil  |
+      | term      |
+      | família   |
+      | Sheldon   |
+      | Star Wars |

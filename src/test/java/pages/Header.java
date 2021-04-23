@@ -12,6 +12,7 @@ public class Header extends BasePage{
     private By searchBtnSelector = By.cssSelector("#nav-search-submit-button");
     private By chooseAddressSelector = By.cssSelector("#nav-global-location-popover-link");
     private By addressPopupSelector = By.cssSelector(".a-popover-wrapper");
+    private By menuSelector = By.cssSelector("#nav-xshop a");
 
     public void selectSearchCategory(String category){
         WebElement categoryBtn = super.findElement(categorySelector);
@@ -41,5 +42,16 @@ public class Header extends BasePage{
         WebElement popup = super.findElement(addressPopupSelector);
         super.setDriverWaitVisibility(popup);
         return new ChooseAddressPopup();
+    }
+
+    public LivrosPage openMenu(String menu){
+        List<WebElement> menus = super.findElements(menuSelector);
+        for (WebElement m:menus) {
+            if (m.getText().toLowerCase().equals(menu.toLowerCase())){
+                m.click();
+                break;
+            }
+        }
+        return new LivrosPage();
     }
 }

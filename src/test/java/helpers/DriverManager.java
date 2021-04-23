@@ -20,7 +20,7 @@ public class DriverManager {
         System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH + chromeDriverExtension);
         if (driver == null){
             options = new ChromeOptions();
-//            options.addArguments("headless");
+            options.addArguments("headless");
             driver = new ChromeDriver(options);
         }
         return driver;
@@ -37,6 +37,7 @@ public class DriverManager {
         if (driver != null){
             driver.quit();
             driver = null;
+            driverWait = null;
         }
     }
 }
