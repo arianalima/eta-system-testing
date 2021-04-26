@@ -12,13 +12,15 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public class ListedBooksSteps {
-    MainPage mainPage = new MainPage();
-    Header header = mainPage.getHeader();
+    MainPage mainPage;
+    Header header;
     ListedProductsPage resultsPage;
     LeftNavMenu leftNavMenu;
     LivrosPage livrosPage;
 
     public ListedBooksSteps(){
+        mainPage = new MainPage();
+        header = mainPage.getHeader();
         mainPage.accessPage();
     }
 

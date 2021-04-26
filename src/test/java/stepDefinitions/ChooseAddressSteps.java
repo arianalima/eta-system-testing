@@ -9,12 +9,14 @@ import pages.Header;
 import pages.MainPage;
 
 public class ChooseAddressSteps {
-    MainPage mainPage = new MainPage();
-    Header header = mainPage.getHeader();
+    MainPage mainPage;
+    Header header;
     ChooseAddressPopup popup;
     String error;
 
     public ChooseAddressSteps(){
+        mainPage = new MainPage();
+        header = mainPage.getHeader();
         mainPage.accessPage();
     }
 

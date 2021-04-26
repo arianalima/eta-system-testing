@@ -8,5 +8,4 @@ Feature: Books on sale
     Examples:
     | name     |
     | Ciências |
-    | Infantil |
     | Romance  |
