@@ -6,4 +6,6 @@ Com isso, todos os testes podem ser executados através do `/eta-system-testing/
 
 Por padrão, os testes serão executados em modo headless. Isso pode ser alterado em `/eta-system-testing/src/test/java/helpers/DriverManager.java`
 
+# Demo
+
 ![](demo.gif)
