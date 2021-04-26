@@ -8,4 +8,4 @@ Por padrão, os testes serão executados em modo headless. Isso pode ser alterad
 
 # Demo
 
-![](demo.mp4)
+![](https://github.com/arianalima/eta-system-testing/blob/main/demo.mp4)
